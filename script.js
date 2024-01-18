@@ -6,6 +6,8 @@ function onReady() {
     // do some code, I've specificed
 
     let potatoButton = document.getElementById('potato_button');
+    let unicornButton = document.getElementById('unicorn_button');
+
 }
 
 function handlePotatoClick() {
@@ -22,7 +24,8 @@ function handlePotatoClick() {
 
 function handleUnicornClick() {
     let theDivIWantToAddTo = document.querySelector('div');
-    theDivIWantToAddTo.innerText += '🦄';
+    
+    theDivIWantToAddTo.innerHTML += `<span onclick="deleteUnicorn(event)">🦄</span>`;
 
 }
 
@@ -40,6 +43,12 @@ function deletePotato(event) {
     // how do I get rid of things?
 
     event.target.remove();
+}
+
+function deleteUnicorn (event) {
+    
+    event.target.remove();
+
 }
 
 
